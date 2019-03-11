@@ -55,15 +55,14 @@ RUN apt-get -y update && \
       -D WITH_FFMPEG=ON \
       -D WITH_V4L=ON .. \
     && \
-    rm -rf /opencv /opencv_contrib /var/lib/apt/lists/*
-
-    RUN cd /opencv/build && \
+    cd /opencv/build && \
     make -j$(nproc) && \
     make install && \
     ldconfig \
     && \
+    rm -rf /opencv /opencv_contrib /var/lib/apt/lists/*
 
-    git clone https://github.com/votchallenge/trax.git && \
+    RUN git clone https://github.com/votchallenge/trax.git && \
     mkdir trax/build && \
     cd trax/build && \
     cmake .. && \

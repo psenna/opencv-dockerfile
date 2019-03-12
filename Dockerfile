@@ -69,6 +69,6 @@ RUN apt-get -y update && \
     make && \
     make install && \
     cd ../.. && \
-    rm -rf trax && \
+    rm -rf trax
 
-	CMD ["python3 --version"]
+    CMD ["python3 --version"]

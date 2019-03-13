@@ -28,6 +28,9 @@ RUN apt-get -y update && \
         libtiff-dev \
         libv4l-dev \
         octave \
+	octave-image \
+	octave-financial \
+	octave-nan \
         liboctave-dev \
     	&& \ 
     apt-get clean

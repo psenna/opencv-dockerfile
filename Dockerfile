@@ -31,8 +31,8 @@ RUN apt-get -y update && \
 	octave-image \
 	octave-financial \
 	octave-nan \
-        liboctave-dev \
-    	&& apt-get clean
+        liboctave-dev && \
+        apt-get clean
 
     RUN wget https://github.com/opencv/opencv/archive/$OPENCV_VERSION.zip -O opencv3.zip && \	
     unzip -q opencv3.zip && \
